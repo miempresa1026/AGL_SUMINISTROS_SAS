@@ -191,38 +191,6 @@
       position: relative;
     }
 
-    .boton-whatsapp {
-      display: flex;
-      justify-content: center;
-      margin: 40px 0;
-      z-index: 2;
-      position: relative;
-    }
-
-    .boton-whatsapp a {
-      display: flex;
-      align-items: center;
-      background-color: #25D366;
-      color: white;
-      padding: 14px 24px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .boton-whatsapp a img {
-      width: 28px;
-      height: 28px;
-      margin-right: 10px;
-    }
-
-    .boton-whatsapp a:hover {
-      background-color: #1ebd5a;
-      transform: translateY(-3px);
-    }
-
     footer {
       max-width: 900px;
       margin: 60px auto 20px;
@@ -240,6 +208,37 @@
     footer p {
       margin-bottom: 10px;
       line-height: 1.6;
+    }
+
+    .cta-whatsapp {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .cta-whatsapp a {
+      display: flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .cta-whatsapp a img {
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+    }
+
+    .cta-whatsapp a:hover {
+      background-color: #1ebd5a;
+      transform: translateY(-2px);
     }
 
     @media (max-width: 700px) {
@@ -309,17 +308,16 @@
     <button type="submit">Enviar</button>
   </form>
 
-  <a href="https://www.google.com/maps/place/Calle+19+No.+10-79+Edificio+Guerrero,+Girardot,+Cundinamarca" 
+  <a href="https://www.google.com/maps?q=4.306241,-74.802402&z=17&output=embed" 
      target="_blank" 
      rel="noopener noreferrer"
-     class="boton-ubicacion"
-  >
+     class="boton-ubicacion">
     Ver ubicación en Google Maps
   </a>
 
   <div class="mapa">
     <iframe
-      src="https://www.google.com/maps?q=Calle+19+No.+10-79+Edificio+Guerrero,+Girardot,+Cundinamarca&output=embed"
+      src="https://www.google.com/maps?q=4.306241,-74.802402&z=17&output=embed"
       width="100%"
       height="350"
       style="border:0;"
@@ -329,9 +327,9 @@
     ></iframe>
   </div>
 
-  <div class="boton-whatsapp">
+  <div class="cta-whatsapp">
     <a
-      href="https://wa.me/573006207744?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios"
+      href="https://wa.me/573006207744?text=Hola%2C%20estoy%20interesado%20en%20los%20servicios%20de%20AGL%20SUMINISTROS%20SAS"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -342,7 +340,7 @@
 
   <footer>
     <p><strong>Correo:</strong> AGLSUMINISTROSSAS@GMAIL.COM</p>
-    <p><strong>Dirección:</strong> Calle 19 No. 10 -79 Edificio Guerrero, Girardot, Cundinamarca</p>
+    <p><strong>Dirección:</strong> CLL 19 # 10-79, Edificio Guerrero, oficina 202, Girardot, Cundinamarca</p>
     <p><strong>Teléfono:</strong> +57 300-620-7744</p>
   </footer>
 

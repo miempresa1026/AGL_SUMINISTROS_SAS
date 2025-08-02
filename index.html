@@ -23,7 +23,6 @@
       position: relative;
       scroll-behavior: smooth;
     }
-    /* Fondo logo semi-transparente */
     body::before {
       content: "";
       position: fixed;
@@ -190,36 +189,35 @@
       text-align: center;
       font-size: 1.1rem;
     }
-    .cta-fixed {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
+    .boton-whatsapp {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
     }
-    .cta-fixed a {
+    .boton-whatsapp a {
       display: flex;
       align-items: center;
       background-color: #25D366;
       color: white;
-      padding: 12px 20px;
+      padding: 14px 24px;
       border-radius: 50px;
       font-weight: 600;
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       transition: background-color 0.3s, transform 0.3s;
     }
-    .cta-fixed a img {
+    .boton-whatsapp a img {
       width: 28px;
       height: 28px;
       margin-right: 10px;
     }
-    .cta-fixed a:hover {
+    .boton-whatsapp a:hover {
       background-color: #1ebd5a;
       transform: translateY(-3px);
     }
     footer {
       text-align: center;
-      margin-top: 80px;
+      margin-top: 60px;
       padding: 20px;
       font-size: 0.9rem;
       color: #666;
@@ -324,13 +322,13 @@
         </a>
       </p>
     </section>
-  </div>
 
-  <div class="cta-fixed">
-    <a href="https://wa.me/573006207744?text=Hola%2C%20soy%20cliente%20interesado%20en%20sus%20servicios%20de%20suministros.%20%3FPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor%3F" target="_blank">
-      <img src="logo_whatsapp.svg" alt="WhatsApp" />
-      Contáctanos por WhatsApp
-    </a>
+    <div class="boton-whatsapp">
+      <a href="https://wa.me/573006207744?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios" target="_blank">
+        <img src="logo_whatsapp.svg" alt="WhatsApp" />
+        Contáctanos por WhatsApp
+      </a>
+    </div>
   </div>
 
   <footer>
@@ -342,6 +340,7 @@
   </footer>
 </body>
 </html>
+
 
 
 

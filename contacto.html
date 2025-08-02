@@ -22,17 +22,16 @@
       padding: 0 20px 40px;
       position: relative;
       z-index: 1;
-      /* No max-width ni margin auto para que el fondo ocupe toda la pantalla */
     }
 
-    /* Logo de fondo grande semi-transparente */
+    /* ✅ Logo de fondo semi-transparente con ruta correcta */
     body::before {
       content: "";
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-image: url('../images/logo_agl_transparente.png');
+      background-image: url('images/logo_agl_transparente.png');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 1600px auto;
@@ -57,33 +56,26 @@
       height: 90px;
       gap: 35px;
       position: relative;
-      z-index: 2; /* Por encima del fondo */
+      z-index: 2;
     }
 
     header a.logo-link {
       display: flex;
       align-items: center;
       text-decoration: none;
-      margin: 0;
-      padding: 0;
     }
 
     header img {
       width: 260px;
       max-height: 80px;
       object-fit: contain;
-      cursor: pointer;
       display: block;
-      margin: 0;
-      padding: 0;
     }
 
     nav {
       display: flex;
       align-items: center;
       gap: 30px;
-      margin: 0;
-      padding: 0;
     }
 
     nav a {
@@ -94,15 +86,12 @@
       border-bottom: 3px solid transparent;
       padding-bottom: 5px;
       transition: 0.3s;
-      line-height: 1.2;
-      margin: 0;
     }
 
     nav a:hover,
     nav a:focus {
       color: #3399ff;
       border-bottom-color: #3399ff;
-      outline: none;
     }
 
     nav a[aria-current="page"] {
@@ -114,8 +103,8 @@
       margin: 40px 0 30px;
       font-size: 2.5rem;
       font-weight: 800;
-      position: relative;
       z-index: 2;
+      position: relative;
     }
 
     form {
@@ -170,7 +159,6 @@
       background-color: #3399ff;
     }
 
-    /* Botón ubicación centrado */
     .boton-ubicacion {
       display: block;
       max-width: 250px;
@@ -186,23 +174,22 @@
       text-decoration: none;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
       transition: background-color 0.3s;
-      position: relative;
       z-index: 2;
+      position: relative;
     }
 
     .boton-ubicacion:hover {
       background-color: #3399ff;
     }
 
-    /* Mapa responsivo */
     .mapa {
       max-width: 900px;
-      margin: 30px auto 30px;
+      margin: 30px auto;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      position: relative;
       z-index: 2;
+      position: relative;
     }
 
     footer {
@@ -224,7 +211,6 @@
       line-height: 1.6;
     }
 
-    /* Botón WhatsApp fijo */
     .cta-fixed {
       position: fixed;
       bottom: 20px;
@@ -259,10 +245,9 @@
     @media (max-width: 700px) {
       header {
         flex-direction: column;
-        align-items: center;
         padding: 10px;
-        height: auto;
         gap: 10px;
+        height: auto;
       }
 
       header img {
@@ -271,7 +256,6 @@
       }
 
       nav {
-        margin: 0;
         gap: 15px;
       }
 
@@ -319,7 +303,7 @@
     </label>
 
     <p class="privacidad">
-      Nuestra empresa se compromete a proteger y respetar tu privacidad. Usaremos tus datos solo con fines informativos. Nos comprometemos a no utilizar su información de contacto para enviar spam.
+      Nuestra empresa se compromete a proteger y respetar tu privacidad. Usaremos tus datos solo con fines informativos.
     </p>
 
     <button type="submit">Enviar</button>

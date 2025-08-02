@@ -23,16 +23,17 @@
       position: relative;
       scroll-behavior: smooth;
     }
-    /* Logo de fondo semi-transparente */
+    /* Fondo logo semi-transparente */
     body::before {
       content: "";
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: url('images/logo_agl_transparente.png') no-repeat center center;
-      background-size: contain; /* Para que no se deforme */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1600px;
+      height: 1600px;
+      background: url('logo_agl_transparente.png') no-repeat center center;
+      background-size: contain;
       opacity: 0.12;
       pointer-events: none;
       z-index: 0;
@@ -53,7 +54,6 @@
       z-index: 1000;
       border-bottom: 4px solid #002366;
     }
-    /* Logo principal */
     header img {
       height: 150px;
       flex-shrink: 0;
@@ -260,7 +260,7 @@
 </head>
 <body>
   <header>
-    <img src="images/logo_agl.jpg" alt="Logo AGL" />
+    <img src="logo_agl.jpg" alt="Logo AGL" />
     <nav>
       <a href="index.html" aria-current="page">Inicio</a>
       <a href="servicio.html">Servicios</a>
@@ -328,7 +328,7 @@
 
   <div class="cta-fixed">
     <a href="https://wa.me/573006207744?text=Hola%2C%20soy%20cliente%20interesado%20en%20sus%20servicios%20de%20suministros.%20%3FPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor%3F" target="_blank">
-      <img src="images/logo_whatsapp.svg" alt="WhatsApp" />
+      <img src="logo_whatsapp.svg" alt="WhatsApp" />
       Contáctanos por WhatsApp
     </a>
   </div>

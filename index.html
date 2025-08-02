@@ -13,7 +13,6 @@
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: 'Montserrat', sans-serif;
       color: #002366;
@@ -24,7 +23,6 @@
       position: relative;
       scroll-behavior: smooth;
     }
-
     body::before {
       content: "";
       position: fixed;
@@ -38,7 +36,6 @@
       pointer-events: none;
       z-index: 0;
     }
-
     header {
       max-width: 800px;
       width: 92%;
@@ -53,27 +50,23 @@
       flex-wrap: nowrap;
       position: relative;
       z-index: 1000;
-      border-bottom: 4px solid #002366; /* Línea azul oscura debajo del menú */
+      border-bottom: 4px solid #002366;
     }
-
     header img {
       height: 150px;
       flex-shrink: 0;
       cursor: pointer;
       transition: transform 0.3s ease;
     }
-
     header img:hover {
       transform: scale(1.05);
     }
-
     nav {
       display: flex;
       gap: 35px;
       align-items: center;
       font-weight: 600;
     }
-
     nav a {
       position: relative;
       color: #002366;
@@ -82,7 +75,6 @@
       padding: 8px 0;
       transition: color 0.3s ease;
     }
-
     nav a::after {
       content: "";
       position: absolute;
@@ -94,44 +86,37 @@
       transition: width 0.3s ease;
       border-radius: 2px;
     }
-
     nav a:hover,
     nav a[aria-current="page"] {
       color: #3399ff;
     }
-
     nav a:hover::after,
     nav a[aria-current="page"]::after {
       width: 100%;
     }
-
     .content-wrapper {
       max-width: 1100px;
       margin: auto;
       padding-left: 20px;
       padding-right: 20px;
     }
-
     .hero {
       text-align: center;
       max-width: 850px;
       margin: auto;
       animation: fadeInUp 1s ease-out;
     }
-
     .hero h1 {
       font-size: 3rem;
       font-weight: 800;
       margin-bottom: 20px;
     }
-
     .hero p {
       font-size: 1.2rem;
       line-height: 1.8;
       margin-bottom: 30px;
       font-weight: 300;
     }
-
     .btn {
       display: inline-block;
       padding: 14px 32px;
@@ -144,12 +129,10 @@
       margin: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
-
     .btn:hover {
       background-color: #3399ff;
       transform: translateY(-2px);
     }
-
     .features,
     .testimonios,
     .contacto {
@@ -159,7 +142,6 @@
       margin-right: auto;
       padding: 0 20px;
     }
-
     .features h2,
     .testimonios h2,
     .contacto h2 {
@@ -168,14 +150,12 @@
       text-align: center;
       margin-bottom: 40px;
     }
-
     .features-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
-
     .features-grid div {
       background-color: white;
       padding: 30px;
@@ -185,11 +165,9 @@
       text-align: center;
       transition: transform 0.3s;
     }
-
     .features-grid div:hover {
       transform: translateY(-5px);
     }
-
     .testimonios blockquote {
       font-style: italic;
       color: #333;
@@ -199,7 +177,6 @@
       margin-bottom: 20px;
       border-radius: 8px;
     }
-
     .testimonios cite {
       display: block;
       text-align: right;
@@ -207,19 +184,16 @@
       margin-top: 10px;
       color: #002366;
     }
-
     .contacto p {
       text-align: center;
       font-size: 1.1rem;
     }
-
     .cta-fixed {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 1000;
     }
-
     .cta-fixed a {
       display: flex;
       align-items: center;
@@ -232,18 +206,15 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       transition: background-color 0.3s, transform 0.3s;
     }
-
     .cta-fixed a img {
       width: 28px;
       height: 28px;
       margin-right: 10px;
     }
-
     .cta-fixed a:hover {
       background-color: #1ebd5a;
       transform: translateY(-3px);
     }
-
     footer {
       text-align: center;
       margin-top: 80px;
@@ -252,12 +223,10 @@
       color: #666;
       background-color: #f5f5f5;
     }
-
     footer p span {
       display: block;
       margin-top: 5px;
     }
-
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -268,7 +237,6 @@
         transform: translateY(0);
       }
     }
-
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -277,11 +245,9 @@
         width: 92%;
         top: auto;
       }
-
       header img {
         height: 120px;
       }
-
       nav {
         gap: 20px;
         flex-wrap: wrap;
@@ -295,9 +261,9 @@
     <img src="images/logo_agl.jpg" alt="Logo AGL" />
     <nav>
       <a href="index.html" aria-current="page">Inicio</a>
-      <a href="pages/servicio.html">Servicios</a>
-      <a href="pages/equipo.html">Equipo</a>
-      <a href="pages/contacto.html">Contacto</a>
+      <a href="servicio.html">Servicios</a>
+      <a href="equipo.html">Equipo</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
   </header>
 
@@ -308,8 +274,8 @@
         Proveemos soluciones eficientes y materiales industriales de alta calidad.
         Nuestro compromiso es con tu productividad, seguridad y éxito.
       </p>
-      <a href="pages/servicio.html" class="btn">Ver Servicios</a>
-      <a href="pages/contacto.html" class="btn">Contáctanos</a>
+      <a href="servicio.html" class="btn">Ver Servicios</a>
+      <a href="contacto.html" class="btn">Contáctanos</a>
     </section>
 
     <section class="features">
@@ -351,19 +317,15 @@
       <p>Correo: <strong>AGLSUMINISTROSSAS@GMAIL.COM</strong></p>
       <p>Dirección: Calle 19 No. 10 -79 Edificio Guerrero, Girardot, Cundinamarca</p>
       <p>Teléfono: 
-        <a
-          href="https://wa.me/573006207744?text=Hola%2C%20soy%20cliente%20interesado%20en%20sus%20servicios%20de%20suministros.%20%3FPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor%3F"
-          target="_blank"
-        >+57 300-620-7744</a>
+        <a href="https://wa.me/573006207744?text=Hola%2C%20soy%20cliente%20interesado%20en%20sus%20servicios%20de%20suministros.%20%3FPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor%3F" target="_blank">
+          +57 300-620-7744
+        </a>
       </p>
     </section>
   </div>
 
   <div class="cta-fixed">
-    <a
-      href="https://wa.me/573006207744?text=Hola%2C%20soy%20cliente%20interesado%20en%20sus%20servicios%20de%20suministros.%20%3FPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor%3F"
-      target="_blank"
-    >
+    <a href="https://wa.me/573006207744?text=Hola%2C%20soy%20cliente%20interesado%20en%20sus%20servicios%20de%20suministros.%20%3FPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor%3F" target="_blank">
       <img src="images/logo_whatsapp.svg" alt="WhatsApp" />
       Contáctanos por WhatsApp
     </a>

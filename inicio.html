@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AGL SUMINISTROS SAS - Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #002366;
+      background:
+        repeating-linear-gradient(45deg, #c4d9f7 0, #c4d9f7 1px, #f0f0f5 1px, #f0f0f5 4px),
+        repeating-linear-gradient(135deg, #d9d9d9 0, #d9d9d9 1px, #ffffff 1px, #ffffff 4px);
+      min-height: 100vh;
+      position: relative;
+      scroll-behavior: smooth;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('images/logo_agl_transparente.png') no-repeat center center;
+      background-size: cover;
+      opacity: 0.12;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      max-width: 800px;
+      width: 92%;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+      padding: 10px 30px;
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 12px;
+      flex-wrap: nowrap;
+      position: relative;
+      z-index: 1000;
+      border-bottom: 4px solid #002366; /* Línea azul oscura debajo del menú */
+    }
+
+    header img {
+      height: 150px;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    nav {
+      display: flex;
+      gap: 35px;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    nav a {
+      position: relative;
+      color: #002366;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 8px 0;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #3399ff, #66ccff);
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      color: #3399ff;
+    }
+
+    nav a:hover::after,
+    nav a[aria-current="page"]::after {
+      width: 100%;
+    }
+
+    .content-wrapper {
+      max-width: 1100px;
+      margin: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background-color: #002366;
+      color: white;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s;
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn:hover {
+      background-color: #3399ff;
+      transform: translateY(-2px);
+    }
+
+    .features,
+    .testimonios,
+    .contacto {
+      margin-top: 80px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 20px;
+    }
+
+    .features h2,
+    .testimonios h2,
+    .contacto h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .features-grid div {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      flex: 1 1 250px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .features-grid div:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonios blockquote {
+      font-style: italic;
+      color: #333;
+      background: #fff;
+      padding: 20px;
+      border-left: 5px solid #002366;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .testimonios cite {
+      display: block;
+      text-align: right;
+      font-weight: 600;
+      margin-top: 10px;
+      color: #002366;
+    }
+
+    .contacto p {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .cta-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .cta-fixed a {
+      display: flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .cta-fixed a img {
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+    }
+
+    .cta-fixed a:hover {
+      background-color: #1ebd5a;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+      background-color: #f5f5f5;
+    }
+
+    footer p span {
+      display: block;
+      margin-top: 5px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+        width: 92%;
+        top: auto;
+      }
+
+      header img {
+        height: 120px;
+      }
+
+      nav {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo_agl.jpg" alt="Logo AGL" />
+    <nav>
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="pages/servicio.html">Servicios</a>
+      <a href="pages/equipo.html">Equipo</a>
+      <a href="pages/contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="content-wrapper">
+    <section class="hero">
+      <h1>BIENVENIDOS A AGL SUMINISTROS SAS</h1>
+      <p>
+        Proveemos soluciones eficientes y materiales industriales de alta calidad.
+        Nuestro compromiso es con tu productividad, seguridad y éxito.
+      </p>
+      <a href="pages/servicio.html" class="btn">Ver Servicios</a>
+      <a href="pages/contacto.html" class="btn">Contáctanos</a>
+    </section>
+
+    <section class="features">
+      <h2>¿Por qué elegirnos?</h2>
+      <div class="features-grid">
+        <div>
+          <h3>Experiencia</h3>
+          <p>Más de 10 años liderando el sector de suministros industriales.</p>
+        </div>
+        <div>
+          <h3>Asesoría Técnica</h3>
+          <p>Contamos con expertos que te acompañan en cada proceso.</p>
+        </div>
+        <div>
+          <h3>Calidad Garantizada</h3>
+          <p>Trabajamos con marcas reconocidas y estándares certificados.</p>
+        </div>
+        <div>
+          <h3>Entrega Rápida</h3>
+          <p>Procesamos pedidos con agilidad y cumplimiento.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <blockquote>
+        "AGL nos ha apoyado con materiales de excelente calidad. Su compromiso es inigualable."
+        <cite>- Laura Gómez, Coordinadora de Compras</cite>
+      </blockquote>
+      <blockquote>
+        "Siempre atentos, entregas a tiempo y productos confiables. 100% recomendados."
+        <cite>- Diego Martínez, Gerente Operativo</cite>
+      </blockquote>
+    </section>
+
+    <section class="contacto">
+      <h2>Contáctanos</h2>
+      <p>Correo: <strong>AGLSUMINISTROSSAS@GMAIL.COM</strong></p>
+      <p>Dirección: Calle 19 No. 10 -79 Edificio Guerrero, Girardot, Cundinamarca</p>
+      <p>Teléfono: 
+        <a
+          href="https://wa.me/573006207744?text=Hola%2C%20soy%20cliente%20interesado%20en%20sus%20servicios%20de%20suministros.%20%3FPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor%3F"
+          target="_blank"
+        >+57 300-620-7744</a>
+      </p>
+    </section>
+  </div>
+
+  <div class="cta-fixed">
+    <a
+      href="https://wa.me/573006207744?text=Hola%2C%20soy%20cliente%20interesado%20en%20sus%20servicios%20de%20suministros.%20%3FPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor%3F"
+      target="_blank"
+    >
+      <img src="images/logo_whatsapp.svg" alt="WhatsApp" />
+      Contáctanos por WhatsApp
+    </a>
+  </div>
+
+  <footer>
+    <p>
+      &copy; 2025 AGL SUMINISTROS SAS. Todos los derechos reservados.
+      <span>Dirección: Calle 19 No. 10 -79 Edificio Guerrero, Girardot, Cundinamarca</span>
+      <span>Teléfono: <a href="https://wa.me/573006207744" target="_blank">+57 300-620-7744</a></span>
+    </p>
+  </footer>
+</body>
+</html>
+
+

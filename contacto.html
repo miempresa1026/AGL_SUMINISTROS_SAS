@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - AGL SUMINISTROS SAS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #002366;
+      background:
+        repeating-linear-gradient(45deg, #c4d9f7 0, #c4d9f7 1px, #f0f0f5 1px, #f0f0f5 4px),
+        repeating-linear-gradient(135deg, #d9d9d9 0, #d9d9d9 1px, #ffffff 1px, #ffffff 4px);
+      min-height: 100vh;
+      padding: 0 20px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Logo de fondo grande semi-transparente */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('../images/logo_agl_transparente.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 1600px auto;
+      opacity: 0.07;
+      pointer-events: none;
+      width: 1600px;
+      height: 1020px;
+      z-index: 0;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: 30px auto 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 3px solid #002366;
+      background-color: white;
+      border-radius: 6px 6px 0 0;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      height: 90px;
+      gap: 35px;
+      position: relative;
+      z-index: 2;
+    }
+
+    header a.logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header img {
+      width: 260px;
+      max-height: 80px;
+      object-fit: contain;
+      cursor: pointer;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #002366;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      padding-bottom: 5px;
+      transition: 0.3s;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #3399ff;
+      border-bottom-color: #3399ff;
+      outline: none;
+    }
+
+    nav a[aria-current="page"] {
+      border-bottom-color: #3399ff;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0 30px;
+      font-size: 2.5rem;
+      font-weight: 800;
+      position: relative;
+      z-index: 2;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .privacidad {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 20px 0;
+    }
+
+    button[type="submit"] {
+      background-color: #002366;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #3399ff;
+    }
+
+    /* Botón ubicación centrado */
+    .boton-ubicacion {
+      display: block;
+      max-width: 250px;
+      margin: 30px auto 20px auto;
+      background-color: #002366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      transition: background-color 0.3s;
+      position: relative;
+      z-index: 2;
+    }
+
+    .boton-ubicacion:hover {
+      background-color: #3399ff;
+    }
+
+    /* Mapa responsivo */
+    .mapa {
+      max-width: 900px;
+      margin: 30px auto 30px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    footer {
+      max-width: 900px;
+      margin: 60px auto 20px;
+      text-align: center;
+      color: #444;
+      font-size: 1rem;
+      background-color: #fff;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      position: relative;
+      z-index: 2;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    /* Botón WhatsApp fijo */
+    .cta-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .cta-fixed a {
+      display: flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .cta-fixed a img {
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+    }
+
+    .cta-fixed a:hover {
+      background-color: #1ebd5a;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        height: auto;
+        gap: 10px;
+      }
+
+      header img {
+        width: 200px;
+        max-height: 65px;
+      }
+
+      nav {
+        margin: 0;
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .boton-ubicacion {
+        max-width: 100%;
+        font-size: 0.95rem;
+        padding: 10px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../inicio.html" class="logo-link">
+      <img src="../images/logo_agl.jpg" alt="Logo AGL SUMINISTROS SAS" />
+    </a>
+    <nav>
+      <a href="../inicio.html">INICIO</a>
+      <a href="servicio.html">SERVICIOS</a>
+      <a href="equipo.html">EQUIPO</a>
+      <a href="contacto.html" aria-current="page">CONTACTO</a>
+    </nav>
+  </header>
+
+  <h1>Contáctanos</h1>
+
+  <form onsubmit="return redirigirWhatsapp()">
+    <label for="nombre">Nombre *</label>
+    <input type="text" name="nombre" id="nombre" required />
+
+    <label for="email">Email *</label>
+    <input type="email" name="email" id="email" required />
+
+    <label>
+      <input type="checkbox" name="acepta" required />
+      Acepto recibir comunicaciones informativas de AGL SUMINISTROS S.A.S
+    </label>
+
+    <p class="privacidad">
+      Nuestra empresa se compromete a proteger y respetar tu privacidad. Usaremos tus datos solo con fines informativos. Nos comprometemos a no utilizar su información de contacto para enviar spam.
+    </p>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <a href="https://www.google.com/maps/place/Calle+19+No.+10-79+Edificio+Guerrero,+Girardot,+Cundinamarca" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="boton-ubicacion"
+  >
+    Ver ubicación en Google Maps
+  </a>
+
+  <div class="mapa">
+    <iframe
+      src="https://www.google.com/maps?q=Calle+19+No.+10-79+Edificio+Guerrero,+Girardot,+Cundinamarca&output=embed"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+  <footer>
+    <p><strong>Correo:</strong> AGLSUMINISTROSSAS@GMAIL.COM</p>
+    <p><strong>Dirección:</strong> Calle 19 No. 10 -79 Edificio Guerrero, Girardot, Cundinamarca</p>
+    <p><strong>Teléfono:</strong> +57 300-620-7744</p>
+  </footer>
+
+  <div class="cta-fixed">
+    <a
+      href="https://wa.me/573006207744?text=Hola%2C%20soy%20cliente%20interesado%20en%20sus%20servicios%20de%20suministros.%20%3FPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%2C%20por%20favor%3F"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="../images/logo_whatsapp.svg" alt="WhatsApp" />
+      Contáctanos por WhatsApp
+    </a>
+  </div>
+
+  <script>
+    function redirigirWhatsapp() {
+      const nombre = document.getElementById("nombre").value.trim();
+      const mensaje = `Hola, soy ${nombre} y estoy interesado en recibir información de AGL SUMINISTROS S.A.S.`;
+      const url = "https://wa.me/573006207744?text=" + encodeURIComponent(mensaje);
+      window.open(url, "_blank");
+      return false;
+    }
+  </script>
+</body>
+</html>
+
+
+
+

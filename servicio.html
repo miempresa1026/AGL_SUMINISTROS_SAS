@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios - AGL SUMINISTROS SAS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #002366;
+      background:
+        repeating-linear-gradient(45deg, #c4d9f7 0, #c4d9f7 1px, #f0f0f5 1px, #f0f0f5 4px),
+        repeating-linear-gradient(135deg, #d9d9d9 0, #d9d9d9 1px, #ffffff 1px, #ffffff 4px);
+      min-height: 100vh;
+      padding: 0 20px 40px;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1600px;
+      height: 1600px;
+      background: url("../images/logo_agl.jpg") no-repeat center;
+      background-size: contain;
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: 30px auto 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 3px solid #002366;
+      background-color: white;
+      border-radius: 6px 6px 0 0;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      height: 90px;
+      gap: 35px;
+      position: relative;
+      z-index: 1;
+    }
+
+    header a.logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    header img {
+      width: 260px;
+      max-height: 80px;
+      object-fit: contain;
+      display: block;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    nav a {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #002366;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      padding-bottom: 5px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: #3399ff;
+      border-bottom-color: #3399ff;
+      outline: none;
+    }
+
+    nav a[aria-current="page"] {
+      border-bottom-color: #3399ff;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 800;
+      margin: 40px auto;
+      font-size: 2.5rem;
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+
+    .services-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .service {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .service:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .service h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #004080;
+    }
+
+    .service p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    @media (max-width: 700px) {
+      .services-container {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      header img {
+        width: 200px;
+        max-height: 65px;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    footer {
+      max-width: 900px;
+      margin: 50px auto 20px;
+      text-align: center;
+      color: #555;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    a.btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 30px;
+      background-color: #002366;
+      color: white;
+      font-weight: 700;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    a.btn:hover {
+      background-color: #3399ff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../inicio.html" class="logo-link">
+      <img src="../images/logo_agl.jpg" alt="Logo AGL SUMINISTROS SAS" />
+    </a>
+    <nav>
+      <a href="../inicio.html">INICIO</a>
+      <a href="servicio.html" aria-current="page">SERVICIOS</a>
+      <a href="equipo.html">EQUIPO</a>
+      <a href="contacto.html">CONTACTO</a>
+    </nav>
+  </header>
+
+  <h1>Nuestros Servicios</h1>
+
+  <div class="services-container">
+    <div class="service">
+      <h2>Distribución de Materiales</h2>
+      <p>Ofrecemos un amplio catálogo de materiales industriales y equipos de alta calidad para diversas industrias, garantizando rapidez y confiabilidad en la entrega.</p>
+    </div>
+    <div class="service">
+      <h2>Asesoría Técnica Especializada</h2>
+      <p>Contamos con un equipo de expertos que brindan asesoría personalizada para ayudarte a seleccionar los productos que mejor se adapten a tus necesidades.</p>
+    </div>
+    <div class="service">
+      <h2>Soporte Postventa</h2>
+      <p>Nuestro compromiso no termina con la venta. Ofrecemos soporte técnico y atención continua para asegurar tu completa satisfacción.</p>
+    </div>
+    <div class="service">
+      <h2>Entrega Rápida y Segura</h2>
+      <p>Garantizamos entregas puntuales y seguras para que tus proyectos no se detengan por falta de suministros.</p>
+    </div>
+  </div>
+
+  <div style="text-align:center;">
+    <a href="contacto.html" class="btn">Contáctanos</a>
+  </div>
+
+  <footer>
+    <p>&copy;  2025 AGL SUMINISTROS SAS. Todos los derechos reservados.<br />
+    Dirección: Calle 19 No. 10 -79 Edificio Guerrero, Girardot, Cundinamarca<br />
+    Teléfono: +57 300-620-7744.</p>
+  </footer>
+</body>
+</html>
+

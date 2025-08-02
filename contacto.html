@@ -20,10 +20,9 @@
         repeating-linear-gradient(135deg, #d9d9d9 0, #d9d9d9 1px, #ffffff 1px, #ffffff 4px);
       min-height: 100vh;
       padding: 0 20px 40px;
-      max-width: 1100px;
-      margin: 0 auto;
       position: relative;
       z-index: 1;
+      /* No max-width ni margin auto para que el fondo ocupe toda la pantalla */
     }
 
     /* Logo de fondo grande semi-transparente */
@@ -58,7 +57,7 @@
       height: 90px;
       gap: 35px;
       position: relative;
-      z-index: 2;
+      z-index: 2; /* Por encima del fondo */
     }
 
     header a.logo-link {
@@ -294,11 +293,11 @@
 </head>
 <body>
   <header>
-    <a href="../inicio.html" class="logo-link">
-      <img src="../images/logo_agl.jpg" alt="Logo AGL SUMINISTROS SAS" />
+    <a href="index.html" class="logo-link">
+      <img src="images/logo_agl.jpg" alt="Logo AGL SUMINISTROS SAS" />
     </a>
     <nav>
-      <a href="../inicio.html">INICIO</a>
+      <a href="index.html">INICIO</a>
       <a href="servicio.html">SERVICIOS</a>
       <a href="equipo.html">EQUIPO</a>
       <a href="contacto.html" aria-current="page">CONTACTO</a>
@@ -358,7 +357,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img src="../images/logo_whatsapp.svg" alt="WhatsApp" />
+      <img src="images/logo_whatsapp.svg" alt="WhatsApp" />
       Contáctanos por WhatsApp
     </a>
   </div>
@@ -374,7 +373,3 @@
   </script>
 </body>
 </html>
-
-
-
-

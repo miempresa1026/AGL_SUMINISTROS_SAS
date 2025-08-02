@@ -191,6 +191,38 @@
       position: relative;
     }
 
+    .boton-whatsapp {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0;
+      z-index: 2;
+      position: relative;
+    }
+
+    .boton-whatsapp a {
+      display: flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .boton-whatsapp a img {
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+    }
+
+    .boton-whatsapp a:hover {
+      background-color: #1ebd5a;
+      transform: translateY(-3px);
+    }
+
     footer {
       max-width: 900px;
       margin: 60px auto 20px;
@@ -208,37 +240,6 @@
     footer p {
       margin-bottom: 10px;
       line-height: 1.6;
-    }
-
-    .cta-fixed {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-
-    .cta-fixed a {
-      display: flex;
-      align-items: center;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .cta-fixed a img {
-      width: 28px;
-      height: 28px;
-      margin-right: 10px;
-    }
-
-    .cta-fixed a:hover {
-      background-color: #1ebd5a;
-      transform: translateY(-3px);
     }
 
     @media (max-width: 700px) {
@@ -328,15 +329,9 @@
     ></iframe>
   </div>
 
-  <footer>
-    <p><strong>Correo:</strong> AGLSUMINISTROSSAS@GMAIL.COM</p>
-    <p><strong>Dirección:</strong> Calle 19 No. 10 -79 Edificio Guerrero, Girardot, Cundinamarca</p>
-    <p><strong>Teléfono:</strong> +57 300-620-7744</p>
-  </footer>
-
-  <div class="cta-fixed">
+  <div class="boton-whatsapp">
     <a
-      href="https://wa.me/573006207744?text=Hola%2C%20soy%20cliente%20interesado%20en%20sus%20servicios..."
+      href="https://wa.me/573006207744?text=Hola%2C%20estoy%20interesado%20en%20sus%20servicios"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -344,6 +339,12 @@
       Contáctanos por WhatsApp
     </a>
   </div>
+
+  <footer>
+    <p><strong>Correo:</strong> AGLSUMINISTROSSAS@GMAIL.COM</p>
+    <p><strong>Dirección:</strong> Calle 19 No. 10 -79 Edificio Guerrero, Girardot, Cundinamarca</p>
+    <p><strong>Teléfono:</strong> +57 300-620-7744</p>
+  </footer>
 
   <script>
     function redirigirWhatsapp() {

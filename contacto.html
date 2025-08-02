@@ -6,7 +6,25 @@
   <title>Contacto - AGL SUMINISTROS SAS</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet" />
   <style>
-    /* (aquí irían tus estilos tal cual) */
+    /* ... (mismo CSS que tienes, no lo repito para abreviar) ... */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #002366;
+      background:
+        repeating-linear-gradient(45deg, #c4d9f7 0, #c4d9f7 1px, #f0f0f5 1px, #f0f0f5 4px),
+        repeating-linear-gradient(135deg, #d9d9d9 0, #d9d9d9 1px, #ffffff 1px, #ffffff 4px);
+      min-height: 100vh;
+      padding: 0 20px 40px;
+      position: relative;
+      z-index: 1;
+    }
+    /* resto del CSS igual que el tuyo... */
+    /* (puedes copiar y pegar todo tu CSS sin cambiarlo) */
   </style>
 </head>
 <body>
@@ -43,12 +61,14 @@
     <button type="submit">Enviar</button>
   </form>
 
-  <!-- Botón con enlace corto para app móvil -->
-  <a href="https://maps.app.goo.gl/FTjbSY3rSGuydUZd9" target="_blank" rel="noopener noreferrer" class="boton-ubicacion">
+  <a href="https://maps.app.goo.gl/FTjbSY3rSGuydUZd9" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="boton-ubicacion"
+  >
     Ver ubicación en Google Maps
   </a>
 
-  <!-- Iframe con link embebido para escritorio -->
   <div class="mapa">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.652267276973!2d-74.8154365847734!3d4.300110996187429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f7d41f8bfb0b5%3A0x36856024a9190d97!2sCLL%2019%20%2310-79%2C%20Girardot%2C%20Cundinamarca!5e0!3m2!1ses!2sco!4v1691045530513!5m2!1ses!2sco"
